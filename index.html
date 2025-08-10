@@ -1,0 +1,1064 @@
+<!-- HEADER -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TUNISIA POLICY CIRCLE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+    <link href="css/slider_container.css" rel="stylesheet">
+    <script>
+const translations = {
+    fr: {
+        nav_about: "Qui sommes-nous",
+        nav_team: "Notre équipe",
+        nav_media: "Media Tech",
+        nav_mentor: "Nous mentorons",
+        nav_projects: "Nos projects",
+        hero_subtitle: "Donner de la voix à chacun, façonner un avenir uni",
+        hero_btn_more: "Plus",
+        hero_btn_contact: "Contactez nous",
+        sponsors: "Sponsors",
+        partners: "Our partners",
+        about_title: "À PROPOS DE NOUS",
+        about_header: "TUNISIA POLICY CIRCLE",
+        about_text: "Nous sommes la première représentation internationale de l'ONG américaine The Policy Circle, établie en Tunisie et en Afrique. Cette initiative rassemble des femmes leaders désireuses de trouver des solutions pour leurs communautés en s'appuyant sur des politiques qui encouragent la créativité et l'initiative.Notre objectif principal est de promouvoir le rôle des femmes dans la vie socio-économique.",
+        about_1: "Promotion du leadership féminin",
+        about_2: "Éducation et sensibilisation",
+        about_3: "Création de réseaux et opportunités",
+        about_4: "Plaidoyer pour l’inclusion",
+        blog_title: "Our Blog",
+        blog_header: "Be First Who Read News",
+        blog_placeholder: "..................................",
+        photos_title: "Media Tech",
+        photos_header: "TUNISIA POLICY CIRCLE en Images",
+        photos_all: "Tous",
+        facts_header: "Evolution of women’s careers<br>in Tunisie<br>Constraints and Challenges",
+        facts_title: "Facts",
+        facts_1: "Gender parity index of Higher education graduates",
+        facts_2: "Evolution of the unemployment rate by gender",
+        facts_3: "Distribution of the Tunisian public service by gender",
+        facts_4: "Hierarchical distribution of women in the  public service",
+        quotes: "Quotes !",
+        copyright: "2025 , All right reserved.",
+        designed: "Designed By",
+        back_to_top: "Haut de page"
+    },
+    en: {
+        nav_about: "About Us",
+        nav_team: "Our Team",
+        nav_media: "Media Tech",
+        nav_mentor: "We Mentor",
+        nav_projects: "Our Projects",
+        hero_subtitle: "Giving everyone a voice, shaping a united future",
+        hero_btn_more: "More",
+        hero_btn_contact: "Contact Us",
+        sponsors: "Sponsors",
+        partners: "Our partners",
+        about_title: "ABOUT US",
+        about_header: "TUNISIA POLICY CIRCLE",
+        about_text: "We are the first international representation of the American NGO The Policy Circle, established in Tunisia and Africa. This initiative brings together women leaders eager to find solutions for their communities based on policies that encourage creativity and initiative. Our main goal is to promote the role of women in socio-economic life.",
+        about_1: "Promoting female leadership",
+        about_2: "Education and awareness",
+        about_3: "Networking and opportunities",
+        about_4: "Advocacy for inclusion",
+        blog_title: "Our Blog",
+        blog_header: "Be First Who Read News",
+        blog_placeholder: "..................................",
+        photos_title: "Media Tech",
+        photos_header: "TUNISIA POLICY CIRCLE in Pictures",
+        photos_all: "All",
+        facts_header: "Evolution of women’s careers<br>in Tunisia<br>Constraints and Challenges",
+        facts_title: "Facts",
+        facts_1: "Gender parity index of Higher education graduates",
+        facts_2: "Evolution of the unemployment rate by gender",
+        facts_3: "Distribution of the Tunisian public service by gender",
+        facts_4: "Hierarchical distribution of women in the public service",
+        quotes: "Quotes!",
+        copyright: "2025 , All right reserved.",
+        designed: "Designed By",
+        back_to_top: "Back to Top"
+    }
+};
+
+function setLanguage(lang) {
+    // Save language in localStorage
+    localStorage.setItem('lang', lang);
+
+    // Update nav button
+    document.getElementById('currentLang').innerText = lang.toUpperCase();
+
+    // Translate all elements with data-translate
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Translate hero subtitle
+    var heroSubtitle = document.querySelector('#hero small[data-translate-hero-subtitle]');
+    if (heroSubtitle) {
+        heroSubtitle.innerHTML = translations[lang].hero_subtitle;
+    }
+
+    // Translate hero buttons
+    var heroBtnMore = document.getElementById('hero-btn-more');
+    if (heroBtnMore) {
+        heroBtnMore.innerText = translations[lang].hero_btn_more;
+    }
+    var heroBtnContact = document.getElementById('hero-btn-contact');
+    if (heroBtnContact) {
+        heroBtnContact.innerText = translations[lang].hero_btn_contact;
+    }
+
+    // Sponsors and partners
+    var sponsors = document.querySelector('[data-translate="sponsors"]');
+    if (sponsors) sponsors.innerHTML = translations[lang].sponsors;
+    var partners = document.querySelector('[data-translate="partners"]');
+    if (partners) partners.innerHTML = translations[lang].partners;
+
+    // About section
+    var aboutTitle = document.querySelector('[data-translate="about_title"]');
+    if (aboutTitle) aboutTitle.innerHTML = translations[lang].about_title;
+    var aboutHeader = document.querySelector('[data-translate="about_header"]');
+    if (aboutHeader) aboutHeader.innerHTML = translations[lang].about_header;
+    var aboutText = document.querySelector('[data-translate="about_text"]');
+    if (aboutText) aboutText.innerHTML = translations[lang].about_text;
+    var about1 = document.querySelector('[data-translate="about_1"]');
+    if (about1) about1.innerHTML = translations[lang].about_1;
+    var about2 = document.querySelector('[data-translate="about_2"]');
+    if (about2) about2.innerHTML = translations[lang].about_2;
+    var about3 = document.querySelector('[data-translate="about_3"]');
+    if (about3) about3.innerHTML = translations[lang].about_3;
+    var about4 = document.querySelector('[data-translate="about_4"]');
+    if (about4) about4.innerHTML = translations[lang].about_4;
+
+    // Blog section
+    var blogTitle = document.querySelector('[data-translate="blog_title"]');
+    if (blogTitle) blogTitle.innerHTML = translations[lang].blog_title;
+    var blogHeader = document.querySelector('[data-translate="blog_header"]');
+    if (blogHeader) blogHeader.innerHTML = translations[lang].blog_header;
+    document.querySelectorAll('[data-translate="blog_placeholder"]').forEach(function(el){
+        el.innerHTML = translations[lang].blog_placeholder;
+    });
+
+    // Photos section
+    var photosTitle = document.querySelector('[data-translate="photos_title"]');
+    if (photosTitle) photosTitle.innerHTML = translations[lang].photos_title;
+    var photosHeader = document.querySelector('[data-translate="photos_header"]');
+    if (photosHeader) photosHeader.innerHTML = translations[lang].photos_header;
+    document.querySelectorAll('[data-translate="photos_all"]').forEach(function(el){
+        el.innerHTML = translations[lang].photos_all;
+    });
+
+    // Facts section
+    var factsHeader = document.querySelector('[data-translate="facts_header"]');
+    if (factsHeader) factsHeader.innerHTML = translations[lang].facts_header;
+    var factsTitle = document.querySelector('[data-translate="facts_title"]');
+    if (factsTitle) factsTitle.innerHTML = translations[lang].facts_title;
+    var facts1 = document.querySelector('[data-translate="facts_1"]');
+    if (facts1) facts1.innerHTML = translations[lang].facts_1;
+    var facts2 = document.querySelector('[data-translate="facts_2"]');
+    if (facts2) facts2.innerHTML = translations[lang].facts_2;
+    var facts3 = document.querySelector('[data-translate="facts_3"]');
+    if (facts3) facts3.innerHTML = translations[lang].facts_3;
+    var facts4 = document.querySelector('[data-translate="facts_4"]');
+    if (facts4) facts4.innerHTML = translations[lang].facts_4;
+
+    // Quotes section
+    var quotes = document.querySelector('[data-translate="quotes"]');
+    if (quotes) quotes.innerHTML = translations[lang].quotes;
+
+    // Footer
+    var copyright = document.querySelector('[data-translate="copyright"]');
+    if (copyright) copyright.innerHTML = translations[lang].copyright;
+    var designed = document.querySelector('[data-translate="designed"]');
+    if (designed) designed.innerHTML = translations[lang].designed;
+
+    // Back to top
+    var backToTop = document.querySelector('[data-translate="back_to_top"]');
+    if (backToTop) backToTop.innerHTML = translations[lang].back_to_top;
+}
+
+// On page load, set language from localStorage or default to FR
+document.addEventListener('DOMContentLoaded', function() {
+    let lang = localStorage.getItem('lang') || 'fr';
+    setLanguage(lang);
+
+    // Add event listeners for language switcher
+    document.querySelectorAll('.dropdown-item').forEach(function(item){
+        item.addEventListener('click', function(e){
+            e.preventDefault();
+            const lang = this.textContent.trim().toLowerCase();
+            setLanguage(lang);
+        });
+    });
+});
+    </script>
+
+    
+</head>
+
+<!-- NAV BAR -->
+<body>
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <div >
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg py-3" style="min-height:90px;">
+                <style>
+                    /* Make nav links bigger and bold */
+                    .navbar-nav .nav-link {
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        padding-left: 1.5rem;
+                        padding-right: 1.5rem;
+                        color: #222 !important;
+                        letter-spacing: 0.5px;
+                        transition: color 0.2s;
+                    }
+                    .navbar-nav .nav-link.active,
+                    .navbar-nav .nav-link:focus,
+                    .navbar-nav .nav-link:hover {
+                        color: #0d6efd !important;
+                    }
+                    .navbar-nav {
+                        align-items: center;
+                        gap: 0.5rem;
+                    }
+                    .dropdown-menu .dropdown-item {
+                        font-size: 1.1rem;
+                    }
+                    /* Logo sizing and alignment */
+                    .navbar-brand img {
+                        max-height: 164px;
+                        width: auto;
+                        transition: max-height 0.3s;
+                    }
+                    @media (max-width: 991px) {
+                        .navbar-brand img {
+                            max-height: 128px;
+                        }
+                        .navbar-nav .nav-link {
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }
+                    }
+                        }
+                        .navbar-nav .nav-link {
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                        }
+                    }
+                </style>
+                <a class="navbar-brand d-flex align-items-center me-4" href="#hero" style="margin-right:2.5rem !important;">
+                    <img src="img/logo.png" alt="Logo" class="img-fluid rounded" />
+                </a>
+                <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars text-primary"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto px-2">
+                        
+                        <a href="#aboutus" class="nav-item nav-link" data-translate="nav_about">Qui sommes-nous</a>
+                        <a href="#team" class="nav-item nav-link" data-translate="nav_team">Notre équipe</a>
+                        <!--a href="service.html" class="nav-item nav-link">Prix</a-->
+                        <!--a href="event.html" class="nav-item nav-link">Videos</a-->
+                        <a href="#photos" class="nav-item nav-link" data-translate="nav_media">Media Tech</a>
+                        <a href="#wementor" class="nav-item nav-link" data-translate="nav_mentor">Nous mentorons</a>
+
+                        <a href="#ourprojects" class="nav-item nav-link" data-translate="nav_projects">Nos projects</a>
+                        <!-- Add this inside your navbar, after the last nav-link -->
+<div class="dropdown ms-3">
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="langSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
+        <span id="currentLang">FR</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="langSwitcher">
+        <li><a class="dropdown-item" href="#" onclick="setLanguage('fr')">FR</a></li>
+        <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">EN</a></li>
+    </ul>
+</div>
+
+
+                    </div>
+                    <!--button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a-->
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<!-- HERO -->
+
+<!-- Add Montserrat font from Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    #hero, #hero * {
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+    }
+</style>
+<div id="hero" style="margin-top: -50px !important;">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div style="text-align: center !important; " class="col-lg-4 col-md-12">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4 animated bounceInDown" data-translate-hero-subtitle>Donner de la voix à chacun, façonner un avenir uni</small>
+                <h1 style="font-size:45pt !important; font-weight:900 !important; letter-spacing:1px; align:center !important;" class="display-1 mb-4 animated bounceInDown">TUNISIA POLICY CIRCLE</h1>
+                <a style="color : white" href="#aboutus" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft" id="hero-btn-more">Plus</a>
+                <a style="color : white" href="#contactus" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 animated bounceInLeft" id="hero-btn-contact">Contactez nous</a>
+            </div>
+            <div class="col-lg-2 col-md-12"></div>
+            <div class="col-lg-6 col-md-12" style="margin-left: -30px;">
+                <!-- WRAPPER SLIDER -->
+                <div class="wrapper_slide">
+                    <div class="container_slide">
+                        <input type="radio" name="slide" id="c2" checked>
+                        <label for="c2" class="card_slide">
+                            <div class="row">
+                                <div class="description">
+                                    <!--h4>Digital Technology</h4>
+                                    <p>Gets better every day -
+                                    stay tuned</p-->
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c1">
+                        <label for="c1" class="card_slide" onclick="if(document.getElementById('c1').checked){ window.open('https://managers.tn/2023/11/29/impact-nights-tunisie-reflexions-sur-lia-pour-un-changement-societal-ethique-et-entrepreneurial/?fbclid=IwY2xjawIjKw5leHRuA2FlbQIxMAABHZeRnWZRzKqNurVsIrI40mkA70BT8vK7C7LKNijIIhH0P7P1weh2gTJtTQ_aem_ewFaWVk-kL7AE67sUHxleQ', '_blank'); }">
+                            <div class="row">
+                                <div class="description">
+                                    <!-- Optional description content -->
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c3">
+                        <label for="c3" class="card_slide">
+                            <div class="row">
+                                <div class="description">
+                                    <!--h4>Globalization</h4>
+                                    <p>Help people all over the world</p-->
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="c4">
+                        <label for="c4" class   ="card_slide">
+                        <!-- Add this inside your navbar, after the last nav-link -->
+
+
+                            <div class="row">
+                                <div class="description">
+                                    <!--h4>New technologies</h4>
+                                    <p>Space engineering becomes
+                                    more and more advanced</p-->
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <!-- FIN WRAPPER SLIDER-->
+
+                <!-- SLIDER CONTAINER -->
+                <link rel="stylesheet" href="css/slider_container.css">
+                
+                <div class="slider_container">
+                    <div class="list">
+                        <div class="item">
+                            <img src="css/1.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="css/2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="css/3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="css/4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/slider_container.js"></script>
+<script>
+  jQuery(document).ready(function ($) {
+    $(".slider-img").on("click", function () {
+      $(".slider-img").removeClass("active");
+      $(this).addClass("active");
+  });
+});
+</script>
+
+<!--SPONSORS-->
+<div class="container-fluid service py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3" data-translate="sponsors">Sponsors</small>
+            <h1 class="display-5 mb-5" data-translate="partners">Our partners</h1>
+        </div>
+        <div class="row g-4 justify-content-center text-center">
+            <div class="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="bg-light rounded service-item h-100 d-flex align-items-center justify-content-center" style="padding: 30px 0;">
+                    <div class="service-content-icon text-center">
+                        <a href="https://cddrl.fsi.stanford.edu/" target="_blank">
+                            <img style="width: 130%; max-width: 180px;" src="img/sponsors/cddrl.png" alt="STANFORD-CDDRL">
+                            <h4 class="mb-0 mt-3" style="font-size: 1.3rem;">STANFORD-CDDRL</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="bg-light rounded service-item h-100 d-flex align-items-center justify-content-center" style="padding: 30px 0;">
+                    <div class="service-content-icon text-center">
+                        <a href="https://www.leconomistemaghrebin.com/" target="_blank">
+                            <img style="width: 110%; max-width: 150px;" src="img/sponsors/economiste.png" alt="L'ECONOMISTE">
+                            <h4 class="mb-0 mt-3" style="font-size: 1.3rem;">L'ECONOMISTE</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="bg-light rounded service-item h-100 d-flex align-items-center justify-content-center" style="padding: 30px 0;">
+                    <div class="service-content-icon text-center">
+                        <a href="https://www.lemanager.tn/" target="_blank">
+                            <img style="width: 80%; max-width: 120px;" src="img/sponsors/lemanager.png" alt="LEMANAGER">
+                            <h4 class="mb-0 mt-3" style="font-size: 1.3rem;">LEMANAGER</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="bg-light rounded service-item h-100 d-flex align-items-center justify-content-center">
+                    <div class="service-content-icon text-center">
+                        <a href="https://ardes.tn/" target="_blank">
+                            <img style="width:70%" src="img/sponsors/ardes.png" alt="ARDES">
+                            <h4 class="mb-0 mt-2">ARDES</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="bg-light rounded service-item h-100 d-flex align-items-center justify-content-center">
+                    <div class="service-content-icon text-center">
+                        <a href="https://www.tunivisions.net/" target="_blank">
+                            <img style="width:104%" src="img/sponsors/tunivision.png" alt="TUNIVISION">
+                            <h4 class="mb-0 mt-2">TUNIVISION</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ABOUT US -->
+ <div id="aboutus" class="container-fluid py-6" style="margin-top: -50px !important;">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                <img src="img/logo.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3" data-translate="about_title">À PROPOS DE NOUS</small>
+                <h1 class="display-5 mb-4" data-translate="about_header">TUNISIA POLICY CIRCLE</h1>
+                <p class="mb-4" data-translate="about_text">Nous sommes la première représentation internationale de l'ONG américaine The Policy Circle, établie en Tunisie et en Afrique. Cette initiative rassemble des femmes leaders désireuses de trouver des solutions pour leurs communautés en s'appuyant sur des politiques qui encouragent la créativité et l'initiative.Notre objectif principal est de promouvoir le rôle des femmes dans la vie socio-économique.</p>
+                <div class="row g-4 text-dark mb-5">
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i><span data-translate="about_1">Promotion du leadership féminin</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i><span data-translate="about_2">Éducation et sensibilisation</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i><span data-translate="about_3">Création de réseaux et opportunités</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i><span data-translate="about_4">Plaidoyer pour l’inclusion</span>
+                    </div>
+                </div>
+                <!--a style="color:white" href="" class="btn btn-primary py-3 px-5 rounded-pill">À PROPOS DE NOUS<i class="fas fa-arrow-right ps-2"></i></a-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- BLOG -->
+ <div class="container-fluid blog py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3" data-translate="blog_title">Our Blog</small>
+                    <h1 class="display-5 mb-5" data-translate="blog_header">Be First Who Read News</h1>
+                </div>
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img src="img/blog-1.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-content mx-4 d-flex rounded bg-light">
+                                <div class="text-dark bg-primary rounded-start">
+                                    <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                        <p class="fw-bold mb-0">16</p>
+                                        <p class="fw-bold mb-0">Sep</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="blog_placeholder">..................................</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img src="img/blog-2.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-content mx-4 d-flex rounded bg-light">
+                                <div class="text-dark bg-primary rounded-start">
+                                    <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                        <p class="fw-bold mb-0">16</p>
+                                        <p class="fw-bold mb-0">Sep</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="blog_placeholder">..................................</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img src="img/blog-3.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div class="blog-content mx-4 d-flex rounded bg-light">
+                                <div class="text-dark bg-primary rounded-start">
+                                    <div class="h-100 p-3 d-flex flex-column justify-content-center text-center">
+                                        <p class="fw-bold mb-0">16</p>
+                                        <p class="fw-bold mb-0">Sep</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="blog_placeholder">..................................</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</div>    
+<!-- PHOTOS -->
+ <div id="photos" class="container-fluid event py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3" data-translate="photos_title">Media Tech</small>
+            <h1 class="display-5 mb-5" data-translate="photos_header">TUNISIA POLICY CIRCLE en Images</h1>
+        </div>
+        <div class="tab-class text-center">
+            <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                <li class="nav-item p-2">
+                    <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                        <span class="text-dark" style="width: 150px;" data-translate="photos_all">Tous</span>
+                    </a>
+                </li>
+                <!--li class="nav-item p-2">
+                    <a class="d-flex py-2 mx-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                        <span class="text-dark" style="width: 150px;">TPC</span>
+                    </a>
+                </li-->
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <!-- 20 photo blocks, unchanged -->
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/1.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/2.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/2.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/1.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/3.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/3.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/4.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/4.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/5.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/5.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/6.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/6.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/7.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/7.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/8.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/8.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/9.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/9.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/10.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/10.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/11.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/11.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/12.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/12.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/13.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/13.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/14.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/14.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/15.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/15.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/16.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/16.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/17.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/17.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/18.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/18.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/19.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/19.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="img/TPC/20.jpeg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <h4 class="me-auto">TPC</h4>
+                                            <a href="img/TPC/20.jpeg" data-lightbox="event-2" class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End photo blocks -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FACTS -->
+ <div class="container-fluid blog py-6">
+            <div class="container">
+                <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                                        <h1 class="display-5 mb-5" data-translate="facts_header">Evolution of women’s careers
+in Tunisie
+Constraints and Challenges</h1>
+                    <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3" data-translate="facts_title">Facts</small>
+
+                </div>
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img style="height: 300px;" src="img/facts/facts-1.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div style="margin-top:20px !important" class="blog-content mx-4 d-flex rounded bg-light">
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="facts_1"> Gender parity index of Higher education graduates</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img style="height: 300px;" src="img/facts/facts-2.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div style="margin-top:20px !important" class="blog-content mx-4 d-flex rounded bg-light">
+                                <a  href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="facts_2"> Evolution of the unemployment rate by gender</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img style="height: 300px;" src="img/facts/facts-3.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div style="margin-top:20px !important" class="blog-content mx-4 d-flex rounded bg-light">
+                                <a href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="facts_3">  Distribution of the Tunisian public service by gender</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="overflow-hidden rounded">
+                                <img style="height: 300px;width:100%" src="img/facts/facts-4.jpg" class="img-fluid w-100" alt="">
+                            </div>
+                            <div style="margin-top:20px !important" class="blog-content mx-4 d-flex rounded bg-light">
+                                <a  href="#" class="h5 lh-base my-auto h-100 p-3" data-translate="facts_4">  Hierarchical distribution of women in the  public service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- COMMENTS -->
+ <div class="container-fluid py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <!--<small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonial</small>-->
+            <h1 class="display-5 mb-5" data-translate="quotes">Quotes !</h1>
+        </div>
+        <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle flex-shrink-0" alt="">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                        <i class="fa fa-quote-right fa-2x"></i>
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="m-0">Profession</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="d-flex">
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                        <i class="fas fa-star text-primary"></i>
+                    </div>
+                    <p class="fs-5 m-0 pt-3">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        
+<!-- FOOTER -->
+         <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>2025 </a>, <span data-translate="copyright">All right reserved.</span></span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        <span data-translate="designed">Designed By</span> <a class="border-bottom" href="#">SALHI Jawhar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-md-square btn-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
