@@ -1,0 +1,8 @@
+"Prix 2023":"تتويجات 2023",
+"VOIR PLUS":"شاهد المزيد",
+"Tokyo, Japon":"طوكيو، اليابان",
+"Oslo, Norvège":"اوسلو، النرويج",
+"Anatolie, Turquie":"الأناضول ، تركيا",
+"Athènes + Genève":"أثينا + جنيف",
+"Riyad + Berlin":"الرياض + برلين",
+"Miami, États-Unis":"ميامي ، الولايات المتحدة"

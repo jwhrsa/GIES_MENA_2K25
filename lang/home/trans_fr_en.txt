@@ -1,0 +1,4 @@
+"Donner de la voix à chacun, façonner un avenir uni":"Giving a voice to everyone, shaping a united future.",
+"Bienvenue chez TUNISIA POLICY CIRCLE":"Welcome to TUNISIA POLICY CIRCLE",
+"Plus":"Know more",
+"Contactez nous":"Contact us"

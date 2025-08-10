@@ -1,0 +1,3 @@
+"Album photos":"Photo album",
+"VOIR PLUS":"SEE MORE",
+"Tous":"ALL"

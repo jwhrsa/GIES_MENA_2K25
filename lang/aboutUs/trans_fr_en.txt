@@ -1,0 +1,6 @@
+"À PROPOS DE NOUS":"who we are",
+"Promotion du leadership féminin":"Promotion of womens leadership.",
+"Éducation et sensibilisation":"Education and awareness.",
+"Création de réseaux et opportunités":"Network building and opportunities.",
+"Plaidoyer pour l’inclusion":"Advocacy for inclusion",
+"Nous sommes la première représentation internationale de l'ONG américaine The Policy Circle, établie en Tunisie et en Afrique. Cette initiative rassemble des femmes leaders désireuses de trouver des solutions pour leurs communautés en s'appuyant sur des politiques qui encouragent la créativité et l'initiative.Notre objectif principal est de promouvoir le rôle des femmes dans la vie socio-économique.":"We are the first international representation of the American NGO The Policy Circle, established in Tunisia and Africa. This initiative brings together women leaders eager to find solutions for their communities through policies that encourage creativity and initiative.Our primary goal is to promote the role of women in socio-economic life."

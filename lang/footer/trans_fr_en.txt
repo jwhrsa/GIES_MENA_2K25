@@ -1,0 +1,7 @@
+"Société chebla":"Chebla Company",
+"Emplacement":"Our location",
+"Qui sommes-nous":"Who are we",
+"Page d'accueil":"Home",
+"Contactez-nous":"Contact us",
+"Album photo":"Pictures",
+"Album Video":"Videos"

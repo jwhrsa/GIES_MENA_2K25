@@ -1,0 +1,4 @@
+"Titre de qualité de l'huile biologique":"عنوان جودة الزيت البيولوجي",
+"Bienvenue chez Société Chebla":"مرحبـــا بـكـم فـــي شـركــة شـــبــــلـــة",
+"Plus":"أعرف أكثر",
+"Contactez nous":"للتواصــل"

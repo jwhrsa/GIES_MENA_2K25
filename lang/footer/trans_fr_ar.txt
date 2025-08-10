@@ -1,0 +1,10 @@
+"Société chebla":"شركة شبلة",
+"+ 216 98 37 36 34":"34 36 37 98 216 +",
+"+ 216 55 59 99 71":"71 99 59 55 216 +",
+"chebla.contact@gmail.com":"chebla.contact@gmail.com",
+"Emplacement":"موقعنا الجغرافي",
+"Qui sommes-nous":"من نحن",
+"Page d'accueil":"الصفحة الرئيسية",
+"Contactez-nous":"تواصل معنا",
+"Album photo":"ألبوم الصور",
+"Album Video":"ألبوم الفيديوهات"

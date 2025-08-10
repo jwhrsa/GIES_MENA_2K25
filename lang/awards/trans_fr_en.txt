@@ -1,0 +1,8 @@
+"Prix 2023":"2023 Awards",
+"VOIR PLUS":"SEE MORE",
+"Tokyo, Japon":"Tokyo, Japan",
+"Oslo, Norvège":"Oslo, Norway",
+"Anatolie, Turquie":"Anatolia, Türkiye",
+"Athènes + Genève":"Athens + Geneva",
+"Riyad + Berlin":"Riyadh + Berlin",
+"Miami, États-Unis":"Miami, United States"
